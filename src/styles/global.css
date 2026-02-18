@@ -1,0 +1,46 @@
+
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #0e0e0e;
+  --color-text: #121213;
+  --font-main: 'Inter', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-primary {
+  color: hsl(30 10% 12%);
+}
+
+.text-foreground {
+  color: hsl(30 5% 45%);
+}
+
+.bg-primary {
+  background-color: hsl(30 10% 15%);
+}
+
+.bg-secondary {
+  background-color: hsla(33, 5%, 45%, 0.119);
+}
