@@ -1,0 +1,38 @@
+---
+const techs = [
+  { title: "Amazon Web Services", name: "aws.png" },
+  { title: "Astro", name: "astro.png" },
+  { title: "JavaScript", name: "js.png" },
+  { title: "Blender", name: "blender.png" },
+  { title: "CSS", name: "css.png" },
+  { title: "Django", name: "django.svg" },
+  { title: "Godot", name: "godot.png" },
+  { title: "Laravel", name: "laravel.png" },
+  { title: "Mysql", name: "mysql.png" },
+  { title: "Php", name: "php.png" },
+  { title: "Python", name: "python.png" },
+];
+
+const iconspath = "/img/";
+---
+
+<div class="group overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+  <div class="flex gap-4 py-1 w-max animate-marquee group-hover:[animation-play-state:paused]">
+    {[...techs, ...techs].map((tech) => (
+      <div class="rounded-full border border-gray-200 bg-white px-4 py-2 font-mono text-xs text-foreground flex items-center gap-2 shrink-0">
+        <img class="h-4 w-4 object-contain" src={iconspath + tech.name} />
+        <span class="text-foreground"> | </span>
+        <span>{tech.title}</span>
+      </div>
+    ))}
+  </div>
+  <div class="flex gap-4 w-max animate-marquee-reverse group-hover:[animation-play-state:paused]">
+    {[...techs, ...techs].map((tech) => (
+      <div class="rounded-full border border-gray-200 bg-white px-4 py-2 font-mono text-xs text-foreground flex items-center gap-2 shrink-0">
+        <span>{tech.title}</span>
+        <span class="text-foreground"> | </span>
+        <img class="h-4 w-4 object-contain" src={iconspath + tech.name} />
+      </div>
+    ))}
+  </div>
+</div>

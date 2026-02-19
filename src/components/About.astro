@@ -1,4 +1,6 @@
 ---
+import Technologies  from "./Technologies.astro"
+import Aptitude from "./Aptitude.astro"
 const photosRoute = "/img/"
 const myProfilePhoto = "me.png"
 ---
@@ -16,9 +18,10 @@ const myProfilePhoto = "me.png"
             About
         </span>
         <div class="flex flex-col gap-16">
+            <!-- ABOUT INTRO -->
             <div class="max-w-2xl">
-                <h2 class="mb-6 text-3xl font-bold text-primary sm:text-4xl">
-                    A developer who cares about the details
+                <h2 class="mb-6 text-3xl font-bold text-primary">
+                    A developer who cares <br> about the details
                 </h2>
                 <div class="flex flex-col gap-4 text-foreground">
                     <p>
@@ -31,6 +34,21 @@ const myProfilePhoto = "me.png"
                     </p>
                 </div>
             </div>
+            
+            <!-- TECHNOLOGIES -->
+            <div>    
+                <h3 class="mb-4 text-sm font-bold text-primary">
+                    Technologies I work with
+                </h3>
+
+                <div class="flex flex-wrap gap-2">
+                    <!--TECH CARRUSEL -->
+                    <Technologies title= "JavaScript" name="js.png"/>
+                </div>
+            </div>
+            
+            <!-- APTITUDES -->
+            <Aptitude/>
             
         </div>
     </div>
