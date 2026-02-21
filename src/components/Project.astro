@@ -1,0 +1,36 @@
+---
+/**
+ * img, title, description: String
+ * techs: Array[String]
+ */
+
+const {img, title, description, techs} = Astro.props;
+const imgpath = "/img/"
+---
+
+
+<a href="#" class="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-all hover:shadow-lg hover:border-accent md:flex-row">
+    <div class="relative aspect-video w-full overflow-hidden md:aspect-auto md:w-2/5">
+        <img src={imgpath + img} loading="lazy" class="object-cover transition-transform duration-500 group-hover:scale-105" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="100vw" alt="godot">
+    </div>
+
+    <div class="flex flex-1 flex-col justify-between p-6 md:p-8">
+        <div class="mb-3 flex items-center justify-between">
+            <h3 class="text-lg font-bold text-primary">
+                {title}
+            </h3>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+        </div>
+        <p class="mb-6 text-sm leading-relaxed text-foreground">
+            {description}
+        </p>
+
+        <div class="flex flex-wrap gap-2">
+            {techs.map((tech: String) => (
+                <span class="rounded-full bg-secondary px-3 py-1 font-mono text-xs text-foreground">
+                    {tech}
+                </span>
+                ))}
+        </div>
+    </div>
+</a>

@@ -1,0 +1,39 @@
+---
+import Project from "./Project.astro";
+---
+
+<section class="px-6 py-24 md:py-32">
+    <div class="mx-auto max-w-4xl">
+        <span class="mb-4 inline-block rounded-full bg-secondary px-4 py-1.5 font-mono text-xs text-foreground tracking-wide">
+            Projects
+        </span>
+        <h2 class="mb-12 text-3xl font-bold tracking-tight text-primary sm:text-4xl text-balance">
+            Selected Work
+        </h2>
+
+        <div class="flex flex-col gap-6">
+            <Project 
+            img="godot.png" 
+            title="Project 1" 
+            description="A collaborative task management app built with real-time sync, drag-and-drop boards, and smart notifications."
+            techs={["Godot", "IA", "GDScript"]} 
+            />
+
+            <Project 
+            img="aws.png" 
+            title="Project 2" 
+            description="A collaborative task management app built with real-time sync, drag-and-drop boards, and smart notifications."
+            techs={["Godot", "IA", "GDScript"]} 
+            />
+
+            <Project 
+            img="laravel.png" 
+            title="Project 3" 
+            description="A collaborative task management app built with real-time sync, drag-and-drop boards, and smart notifications."
+            techs={["Godot", "IA", "GDScript"]} 
+            />
+            
+        </div>
+    </div>
+    
+</section>

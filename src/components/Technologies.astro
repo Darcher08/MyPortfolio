@@ -5,6 +5,8 @@ const techs = [
   { title: "JavaScript", name: "js.png" },
   { title: "Blender", name: "blender.png" },
   { title: "CSS", name: "css.png" },
+];
+const techs2 = [
   { title: "Django", name: "django.svg" },
   { title: "Godot", name: "godot.png" },
   { title: "Laravel", name: "laravel.png" },
@@ -17,6 +19,7 @@ const iconspath = "/img/";
 ---
 
 <div class="group overflow-hidden w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+  <!-- Primer Carrusel -->
   <div class="flex gap-4 py-1 w-max animate-marquee group-hover:[animation-play-state:paused]">
     {[...techs, ...techs].map((tech) => (
       <div class="rounded-full border border-gray-200 bg-white px-4 py-2 font-mono text-xs text-foreground flex items-center gap-2 shrink-0">
@@ -26,8 +29,9 @@ const iconspath = "/img/";
       </div>
     ))}
   </div>
+  <!-- Segundo Carrusel -->
   <div class="flex gap-4 w-max animate-marquee-reverse group-hover:[animation-play-state:paused]">
-    {[...techs, ...techs].map((tech) => (
+    {[...techs2, ...techs2].map((tech) => (
       <div class="rounded-full border border-gray-200 bg-white px-4 py-2 font-mono text-xs text-foreground flex items-center gap-2 shrink-0">
         <span>{tech.title}</span>
         <span class="text-foreground"> | </span>
