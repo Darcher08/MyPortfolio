@@ -1,46 +1,38 @@
----
----
-<style>
-    a { 
-        color: hsl(32.7, 4.8%, 44.9%);
-    }
-    .home {
-        color: black;
-    }
-</style>
-    <nav class="rounded-full bg-white/90 px-6 py-3 shadow-lg backdrop-blur-md border border-gray-200">
-        <div class="flex items-center justify-between">
-            <!-- Logo/Home -->
-            <a href="/" class="font-sans text-sm font-bold text-black home">Home</a>
-            <!-- Desktop Menu -->
-            <ul class="hidden md:flex items-center gap-1">
-                <li><a class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors bg-gray-100 hover:text-gray-900" href="/">About</a></li>
-                <li><a class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900" href="/">Projects</a></li>
-                <li><a class="rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900" href="/">Contact</a></li>
-            </ul>
 
-            <!-- Mobile Menu Button -->
-            <button 
-                data-mobile-menu-toggle 
-                class="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-full transition-colors" 
-                aria-label="Toggle menu"
-                aria-expanded="false"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            </button>
-        </div>
-    </nav>
 
-    <!-- Mobile Menu - Contenedor separado -->
-    <div 
-        data-mobile-menu 
-        class="hidden md:hidden mt-2 rounded-3xl bg-white/95 p-4 shadow-lg backdrop-blur-md border border-gray-200"
-    >
-        <ul class="flex flex-col gap-1">
-            <li><a href="/" class="block rounded-2xl px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors">About</a></li>
-            <li><a href="/" class="block rounded-2xl px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors">Projects</a></li>
-            <li><a href="/" class="block rounded-2xl px-4 py-3 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors">Contact</a></li>
+<nav class="nav-bar rounded-full bg-white/90 px-6 py-3 shadow-lg backdrop-blur-md border border-gray-200">
+    <div class="flex items-center justify-between">
+        <!-- Logo/Home -->
+        <a href="/" class="font-sans text-md font-bold text-black">Home</a>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-1">
+            <li><a class="nav-item rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-gray-900" href="#about">About</a></li>
+            <li><a class="nav-item rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-gray-900" href="#project">Projects</a></li>
+            <li><a class="nav-item rounded-full px-4 py-2 text-sm text-gray-600 transition-colors hover:text-gray-900" href="#contact">Contact</a></li>
         </ul>
+
+        <!-- Mobile Menu Button -->
+        <button 
+            data-mobile-menu-toggle 
+            class="md:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-full transition-colors" 
+            aria-label="Toggle menu"
+            aria-expanded="false"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
     </div>
+</nav>
+
+<!-- Mobile Menu - Contenedor separado -->
+<div 
+    data-mobile-menu 
+    class="hidden md:hidden mt-2 rounded-3xl bg-white/95 p-4 shadow-lg backdrop-blur-md border border-gray-200"
+>
+    <ul class="flex flex-col gap-1">
+        <li><a class="nav-item block rounded-2xl px-4 py-3 text-sm text-gray-700 transition-colors" href="#about">About</a></li>
+        <li><a class="nav-item block rounded-2xl px-4 py-3 text-sm text-gray-700 transition-colors" href="#project">Projects</a></li>
+        <li><a class="nav-item block rounded-2xl px-4 py-3 text-sm text-gray-700 transition-colors" href="#contact">Contact</a></li>
+    </ul>
+</div>
 
 
