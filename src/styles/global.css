@@ -1,5 +1,6 @@
 :root {
-  --color-bg: #f8f4f4;
+  --color-bg: #f9f7f5;  /*fdfcfc;*/
+
   --color-primary: #0e0e0e;
   --color-text: #121213;
   --font-main: "Inter", sans-serif;
